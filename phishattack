@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>welcome happ newyear 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+    video {
+      border: 2px solid #333;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>santhoshaa gift</h2>
+  <p>This page asks for gift permission openly.</p>
+
+  <button onclick="startCamera()">Start Camera</button>
+  <br><br>
+
+  <video id="video" autoplay playsinline></video>
+
+  <script>
+    async function startCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+          audio: false
+        });
+        document.getElementById("video").srcObject = stream;
+      } catch (error) {
+        alert("Camera permission denied or not available.");
+        console.error(error);
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+  
